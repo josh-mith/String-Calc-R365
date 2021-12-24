@@ -11,7 +11,7 @@ namespace StringCalcNewSLN
         //Function to add user-inputted numbers
         public static int Add(string sInput)
         {
-            var aNumbers = sInput.Split(",");
+            var aNumbers = sInput.Split(new Char [] {',', '\n'}, StringSplitOptions.RemoveEmptyEntries);
             var iSum = 0;
 
             foreach (var cNumber in aNumbers)

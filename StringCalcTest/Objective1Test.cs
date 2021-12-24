@@ -37,5 +37,14 @@ namespace StringCalcNewSLNTest
             int iCalculatedResult = Program.Add(sInput);
             Assert.AreEqual(iCalculatedResult, iRealResult);
         }
+
+        [Test]
+        [TestCase("1\n2,3,9", 15)]
+        public void ShouldAllowNewlineDelimiter(string sInput, int iRealResult)
+        {
+            Program programTest = new StringCalcNewSLN.Program();
+            int iCalculatedResult = Program.Add(sInput);
+            Assert.AreEqual(iCalculatedResult, iRealResult);
+        }
     }
 }
