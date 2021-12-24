@@ -29,12 +29,13 @@ namespace StringCalcNewSLNTest
         }
 
         [Test]
-        [TestCase("2,4,6,8")]
-        [TestCase("19,appreciate,20")]
-        public void ShouldAllowSumOfMaximumTwoNumbers(string sInput)
+        [TestCase("2,4,6,8", 20)]
+        [TestCase("19,appreciate,20,20,50", 109)]
+        public void ShouldAllowUnlimitedNumbers(string sInput, int iRealResult)
         {
             Program programTest = new StringCalcNewSLN.Program();
-            Assert.Throws<Exception>(() => Program.Add(sInput));
+            int iCalculatedResult = Program.Add(sInput);
+            Assert.AreEqual(iCalculatedResult, iRealResult);
         }
     }
 }

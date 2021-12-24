@@ -14,11 +14,6 @@ namespace StringCalcNewSLN
             var aNumbers = sInput.Split(",");
             var iSum = 0;
 
-            if (aNumbers.Length > 2)
-            {
-                throw new Exception("You cannot add more than 2 numbers in your sum.");
-            }
-
             foreach (var cNumber in aNumbers)
             {
                 if (int.TryParse(cNumber, out int iCleanedNumber))
