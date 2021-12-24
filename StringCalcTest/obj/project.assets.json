@@ -3490,11 +3490,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joshr\\source\\repos\\StringCalcTest\\StringCalcNewSLNTest.csproj",
+      "projectUniqueName": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcTest\\StringCalcNewSLNTest.csproj",
       "projectName": "StringCalcNewSLNTest",
-      "projectPath": "C:\\Users\\joshr\\source\\repos\\StringCalcTest\\StringCalcNewSLNTest.csproj",
+      "projectPath": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcTest\\StringCalcNewSLNTest.csproj",
       "packagesPath": "C:\\Users\\joshr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joshr\\source\\repos\\StringCalcTest\\obj\\",
+      "outputPath": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\joshr\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3511,8 +3511,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\joshr\\source\\repos\\StringCalcNewSLN\\StringCalcNewSLN.csproj": {
-              "projectPath": "C:\\Users\\joshr\\source\\repos\\StringCalcNewSLN\\StringCalcNewSLN.csproj"
+            "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcNewSLN\\StringCalcNewSLN.csproj": {
+              "projectPath": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcNewSLN\\StringCalcNewSLN.csproj"
             }
           }
         }
@@ -3555,7 +3555,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

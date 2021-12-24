@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "epxdMNrC9bknKUaoOE4nGrLlWkAX/ihXORFkcCiykoS0qLXvjjH4nrYjCVhyCMjXyG3LoJK6ofYJw7hbD0swVQ==",
+  "dgSpecHash": "r0i9TCuUnavvA9FyRtfSVlGirotzO/FmW/E7j+4eqAJ+9nEleMrHo+3+v8iS2TpjA5FyaWWtzW8xeqD4cjud5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joshr\\source\\repos\\StringCalcNewSLN\\StringCalcNewSLN.csproj",
+  "projectFilePath": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcNewSLN\\StringCalcNewSLN.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joshr\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\joshr\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\joshr\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512",
     "C:\\Users\\joshr\\.nuget\\packages\\nunit3testadapter\\4.1.0\\nunit3testadapter.4.1.0.nupkg.sha512",
-    "C:\\Users\\joshr\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512"
+    "C:\\Users\\joshr\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
   ],
   "logs": []
 }

@@ -257,11 +257,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joshr\\source\\repos\\StringCalcNewSLN\\StringCalcNewSLN.csproj",
+      "projectUniqueName": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcNewSLN\\StringCalcNewSLN.csproj",
       "projectName": "StringCalcNewSLN",
-      "projectPath": "C:\\Users\\joshr\\source\\repos\\StringCalcNewSLN\\StringCalcNewSLN.csproj",
+      "projectPath": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcNewSLN\\StringCalcNewSLN.csproj",
       "packagesPath": "C:\\Users\\joshr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joshr\\source\\repos\\StringCalcNewSLN\\obj\\",
+      "outputPath": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcNewSLN\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\joshr\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -312,7 +312,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.21, 3.1.21]"
+            "version": "[3.1.13, 3.1.13]"
           }
         ],
         "frameworkReferences": {
@@ -320,7 +320,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

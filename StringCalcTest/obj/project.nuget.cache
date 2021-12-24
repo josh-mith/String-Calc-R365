@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EIIpA30TCBf9Os023n8XANc5NWL2L6XXUGj8pSEo3gygWepfbFgTOTeT5fI6FSw51ZvkCgQNmie6jOHJc9TpEA==",
+  "dgSpecHash": "kmwp0KItYOQS2UpIBYryiQdoViQCVpy2Cq27aIW19B1/BE8/oEL6YAbh5gpGFWxz99u+NMjY8+ABhWQ9UyVG0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\joshr\\source\\repos\\StringCalcTest\\StringCalcNewSLNTest.csproj",
+  "projectFilePath": "C:\\Users\\joshr\\source\\repos\\String-Calc-R365\\StringCalcTest\\StringCalcNewSLNTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joshr\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",
     "C:\\Users\\joshr\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
