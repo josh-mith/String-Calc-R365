@@ -17,10 +17,11 @@ namespace StringCalcNewSLN
 
             foreach (var cNumber in aNumbers)
             {
-                if (int.TryParse(cNumber, out int iCleanedNumber))
+                if (int.TryParse(cNumber, out int iCleanedNumber) && iCleanedNumber < 1001)
                 {
                     iSum += iCleanedNumber;
                 }
+
                 //Log presence of negative numbers in user input
                 if (iCleanedNumber < 0)
                 { 

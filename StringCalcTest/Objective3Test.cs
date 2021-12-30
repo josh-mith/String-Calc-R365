@@ -63,5 +63,16 @@ namespace StringCalcNewSLNTest
                 Throws.TypeOf<Exception>()
                 .With.Message.EqualTo("Your input contained the following invalid negative numbers: -9,-17. Please try again."));
         }
+
+        [Test]
+        [TestCase("9001,1", 1)]
+        [TestCase("1001", 0)]
+        [TestCase("127, 1001", 127)]
+        public void RegardsNumbersOverAThousandAsZero(string sInput, int iRealResult)
+        {
+            Program programTest = new StringCalcNewSLN.Program();
+            int iCalculatedResult = Program.Add(sInput);
+            Assert.AreEqual(iCalculatedResult, iRealResult);
+        }
     }
 }
