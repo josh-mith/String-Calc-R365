@@ -46,5 +46,22 @@ namespace StringCalcNewSLNTest
             int iCalculatedResult = Program.Add(sInput);
             Assert.AreEqual(iCalculatedResult, iRealResult);
         }
+
+        [Test]
+        [TestCase("1,2,3,-9")]
+        [TestCase("-17")]
+        public void ShouldThrowExceptionWhenInputIsNegative(string sInput)
+        {
+            Assert.Throws<Exception>(() => Program.Add(sInput));
+        }
+
+        [Test]
+        [TestCase("1,2,3,-9, -17")]
+        public void ShouldListNegativeNumbersInExceptionMessageOnNegativeInput(string sInput)
+        {
+            Assert.That(() => Program.Add(sInput), 
+                Throws.TypeOf<Exception>()
+                .With.Message.EqualTo("Your input contained the following invalid negative numbers: -9,-17. Please try again."));
+        }
     }
 }

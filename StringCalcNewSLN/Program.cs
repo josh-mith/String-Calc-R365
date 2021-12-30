@@ -13,6 +13,7 @@ namespace StringCalcNewSLN
         {
             var aNumbers = sInput.Split(new Char [] {',', '\n'}, StringSplitOptions.RemoveEmptyEntries);
             var iSum = 0;
+            List<int> aNegativeNumbers = new List<int>();
 
             foreach (var cNumber in aNumbers)
             {
@@ -20,9 +21,23 @@ namespace StringCalcNewSLN
                 {
                     iSum += iCleanedNumber;
                 }
+                //Log presence of negative numbers in user input
+                if (iCleanedNumber < 0)
+                { 
+                    aNegativeNumbers.Add(iCleanedNumber);
+                }
             }
+
+            if (aNegativeNumbers.Count > 0)
+            {
+                throw new Exception(string.Format("Your input contained the following invalid negative numbers: {0}. Please try again.", string.Join(",", aNegativeNumbers)));
+            }
+
             return iSum;
         }
+
+        
+
         public static void Main(string[] args)
         {
             //Prompt user for input
