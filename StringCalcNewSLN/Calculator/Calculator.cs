@@ -1,56 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text;
 
 namespace StringCalcNewSLN
 {
-    public class Program
+    public class Calculator
     {
-        private const int I_STARTING_NUM = 0;
-
         //Function to add user-inputted numbers
         public static int Add(string sInput)
         {
-            var aNumbers = sInput.Split(new Char [] {',', '\n'}, StringSplitOptions.RemoveEmptyEntries);
+            var aNumbers = sInput.Split(new Char[] { ',', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             var iSum = 0;
             List<int> aNegativeNumbers = new List<int>();
 
+            //Maximum and minimum values for acceptable numbers
+            int iFloor = 0;
+            int iCeiling = 1000;
+
             foreach (var cNumber in aNumbers)
             {
-                if (int.TryParse(cNumber, out int iCleanedNumber) && iCleanedNumber < 1001)
+                //Clean data
+                if (int.TryParse(cNumber, out int iCleanedNumber) && iCeiling > iCleanedNumber)
                 {
                     iSum += iCleanedNumber;
                 }
 
                 //Log presence of negative numbers in user input
-                if (iCleanedNumber < 0)
-                { 
+                if (iCleanedNumber < iFloor)
+                {
                     aNegativeNumbers.Add(iCleanedNumber);
                 }
             }
 
+            //Throw exception upon user submitting negative values for addition
             if (aNegativeNumbers.Count > 0)
             {
                 throw new Exception(string.Format("Your input contained the following invalid negative numbers: {0}. Please try again.", string.Join(",", aNegativeNumbers)));
             }
 
             return iSum;
-        }
-
-        
-
-        public static void Main(string[] args)
-        {
-            //Prompt user for input
-            Console.WriteLine("Which numbers would you like find the sum of?");
-
-            //Collect user input
-            string sUserInput = Console.ReadLine();
-
-            //Run Add function w/ user input
-            Console.WriteLine(Add(sUserInput));
-
-
         }
     }
 }

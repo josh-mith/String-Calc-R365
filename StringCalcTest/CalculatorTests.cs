@@ -13,7 +13,7 @@ namespace StringCalcNewSLNTest
         public void ReturnsSumOfCommaDelimitedNumbers(string sInput, int iRealResult)
         {
             Program programTest = new StringCalcNewSLN.Program();
-            int iCalculatedResult = Program.Add(sInput);
+            int iCalculatedResult = Calculator.Add(sInput);
             Assert.AreEqual(iCalculatedResult, iRealResult);
         }
 
@@ -24,7 +24,7 @@ namespace StringCalcNewSLNTest
         public void RegardsEmptyTextAndNonNumericAsZero(string sInput, int iRealResult)
         {
             Program programTest = new StringCalcNewSLN.Program();
-            int iCalculatedResult = Program.Add(sInput);
+            int iCalculatedResult = Calculator.Add(sInput);
             Assert.AreEqual(iCalculatedResult, iRealResult);
         }
 
@@ -34,7 +34,7 @@ namespace StringCalcNewSLNTest
         public void ShouldAllowUnlimitedNumbers(string sInput, int iRealResult)
         {
             Program programTest = new StringCalcNewSLN.Program();
-            int iCalculatedResult = Program.Add(sInput);
+            int iCalculatedResult = Calculator.Add(sInput);
             Assert.AreEqual(iCalculatedResult, iRealResult);
         }
 
@@ -43,7 +43,7 @@ namespace StringCalcNewSLNTest
         public void ShouldAllowNewlineDelimiter(string sInput, int iRealResult)
         {
             Program programTest = new StringCalcNewSLN.Program();
-            int iCalculatedResult = Program.Add(sInput);
+            int iCalculatedResult = Calculator.Add(sInput);
             Assert.AreEqual(iCalculatedResult, iRealResult);
         }
 
@@ -52,14 +52,14 @@ namespace StringCalcNewSLNTest
         [TestCase("-17")]
         public void ShouldThrowExceptionWhenInputIsNegative(string sInput)
         {
-            Assert.Throws<Exception>(() => Program.Add(sInput));
+            Assert.Throws<Exception>(() => Calculator.Add(sInput));
         }
 
         [Test]
         [TestCase("1,2,3,-9, -17")]
         public void ShouldListNegativeNumbersInExceptionMessageOnNegativeInput(string sInput)
         {
-            Assert.That(() => Program.Add(sInput), 
+            Assert.That(() => Calculator.Add(sInput), 
                 Throws.TypeOf<Exception>()
                 .With.Message.EqualTo("Your input contained the following invalid negative numbers: -9,-17. Please try again."));
         }
@@ -71,7 +71,7 @@ namespace StringCalcNewSLNTest
         public void RegardsNumbersOverAThousandAsZero(string sInput, int iRealResult)
         {
             Program programTest = new StringCalcNewSLN.Program();
-            int iCalculatedResult = Program.Add(sInput);
+            int iCalculatedResult = Calculator.Add(sInput);
             Assert.AreEqual(iCalculatedResult, iRealResult);
         }
     }
