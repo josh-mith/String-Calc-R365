@@ -67,7 +67,7 @@ namespace StringCalcNewSLNTest
         }
 
         [Test]
-        [TestCase("120q7", new string[] { ",", "\n","q"}, 127)]
+        [TestCase("120qqq7", new string[] { ",", "\n","qqq"}, 127)]
         public void LetsUsersAddCustomDelimiter(string sInput, string[] sDelimiters, int iRealResult)
         {
             Program programTest = new StringCalcNewSLN.Program();
