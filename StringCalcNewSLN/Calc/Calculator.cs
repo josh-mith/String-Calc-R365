@@ -31,6 +31,7 @@ namespace StringCalcNewSLN
                     Console.WriteLine("Enter a character to use as a custom delimiter. Please only enter one character.");
 
                     var sPotentialDelimiter = Console.ReadLine();
+                    sCustomDelimiter = Console.ReadLine();
 
                     //Check to see if delimiter is a single character
                     if (sPotentialDelimiter.Length == 1)
@@ -42,6 +43,7 @@ namespace StringCalcNewSLN
                     {
                         Console.WriteLine("You must include only a single character.");
                     }
+
                 }                
                 return aAllDelimiters;
             }
