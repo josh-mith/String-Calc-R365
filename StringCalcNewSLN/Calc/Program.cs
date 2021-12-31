@@ -8,6 +8,8 @@ namespace StringCalcNewSLN
     {
         public static void Main(string[] args)
         {
+            var sProgramDelimiters = Calculator.CustomDelimiter();
+
             //Prompt user for input
             Console.WriteLine("Which numbers would you like find the sum of?");
 
@@ -15,9 +17,7 @@ namespace StringCalcNewSLN
             string sUserInput = Console.ReadLine();
 
             //Run Add function w/ user input
-            Console.WriteLine(Calculator.Add(sUserInput));
-
-
+            Console.WriteLine(Calculator.Add(sUserInput, sProgramDelimiters));
         }
     }
 }
