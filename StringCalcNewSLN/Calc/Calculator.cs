@@ -28,22 +28,11 @@ namespace StringCalcNewSLN
                 var sCustomDelimiter = "";
                 while (sCustomDelimiter == "")
                 {
-                    Console.WriteLine("Enter a character to use as a custom delimiter. Please only enter one character.");
+                    Console.WriteLine("Enter a character to use as a custom delimiter.");
 
-                    var sPotentialDelimiter = Console.ReadLine();
                     sCustomDelimiter = Console.ReadLine();
 
-                    //Check to see if delimiter is a single character
-                    if (sPotentialDelimiter.Length == 1)
-                    {
-                        sCustomDelimiter = sPotentialDelimiter;
-                        aAllDelimiters[2] = sCustomDelimiter;
-                    }
-                    else
-                    {
-                        Console.WriteLine("You must include only a single character.");
-                    }
-
+                    aAllDelimiters[2] = sCustomDelimiter;
                 }                
                 return aAllDelimiters;
             }

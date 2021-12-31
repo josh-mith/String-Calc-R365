@@ -18,7 +18,7 @@ namespace StringCalcNewSLNTest
         }
 
         [Test]
-        [TestCase("28,", 28)]
+        [TestCase("28,", new string[] { ",", "\n" }, 28)]
         [TestCase("", new string[] { ",", "\n" }, 0)]
         [TestCase("714,Irvine", new string[] { ",", "\n" }, 714)]
         public void RegardsEmptyTextAndNonNumericAsZero(string sInput, string[] sDelimiters, int iRealResult)
