@@ -9,7 +9,9 @@ namespace StringCalcNewSLN
     {
         public static string[] CustomDelimiter()
         {
-            var aAllDelimiters = new string[] {",", "\n"};
+            var aAllDelimiters = new string[3];
+            aAllDelimiters[0] =  ",";
+            aAllDelimiters[1] = "\n";
 
             Console.WriteLine("Press 'y' to create a custom delimiter or press 'n' to skip.");
 
@@ -31,10 +33,10 @@ namespace StringCalcNewSLN
                     var sPotentialDelimiter = Console.ReadLine();
 
                     //Check to see if delimiter is a single character
-                    if(sPotentialDelimiter.Length == 1)
+                    if (sPotentialDelimiter.Length == 1)
                     {
                         sCustomDelimiter = sPotentialDelimiter;
-                        aAllDelimiters.Append(sCustomDelimiter);
+                        aAllDelimiters[2] = sCustomDelimiter;
                     }
                     else
                     {
