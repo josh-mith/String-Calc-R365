@@ -9,32 +9,37 @@ namespace StringCalcNewSLN
     {
         public static string[] CustomDelimiter()
         {
-            var aAllDelimiters = new string[3];
-            aAllDelimiters[0] =  ",";
-            aAllDelimiters[1] = "\n";
+            var aAllDelimiters = new List<string>();
+            var aDefaultDelimiters = new string[2];
+            aDefaultDelimiters[0] = ",";
+            aDefaultDelimiters[1] = ",";
+            aAllDelimiters.Add(aDefaultDelimiters[0]);
+            aAllDelimiters.Add(aDefaultDelimiters[1]);
 
-            Console.WriteLine("Press 'y' to create a custom delimiter or press 'n' to skip.");
+            Console.WriteLine("Enter a new character to use as a custom delimiter, or enter 'n' to skip or exit.");
 
             //Get user input on custom delimiter option
             var sDelimiterInput = Console.ReadLine();
 
             if (string.Compare(sDelimiterInput, "n", true) == 0)
             {
-                return aAllDelimiters;
+                return aAllDelimiters.ToArray();
             }
             //If user doesn't enter 'n'
             else
             {
                 var sCustomDelimiter = "";
-                while (sCustomDelimiter == "")
+                var iCount = 2;
+                while (sCustomDelimiter != "n")
                 {
-                    Console.WriteLine("Enter a character to use as a custom delimiter.");
+                    Console.WriteLine("Enter a new character to use as a custom delimiter, or enter 'n' to skip or exit.");
 
                     sCustomDelimiter = Console.ReadLine();
 
-                    aAllDelimiters[2] = sCustomDelimiter;
+                    aAllDelimiters.Add(sCustomDelimiter);
+                    iCount++;
                 }                
-                return aAllDelimiters;
+                return aAllDelimiters.ToArray();
             }
         }
 

@@ -8,6 +8,9 @@ namespace StringCalcNewSLN
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to the R365 Challenge Calculator!");
+            Console.WriteLine("\n");
+
             var sProgramDelimiters = Calculator.CustomDelimiter();
 
             //Prompt user for input

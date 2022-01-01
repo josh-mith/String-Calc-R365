@@ -67,8 +67,27 @@ namespace StringCalcNewSLNTest
         }
 
         [Test]
-        [TestCase("120qqq7", new string[] { ",", "\n","qqq"}, 127)]
-        public void LetsUsersAddCustomDelimiter(string sInput, string[] sDelimiters, int iRealResult)
+        [TestCase("120q7", new string[] { ",", "\n","q"}, 127)]
+        public void LetsUsersAddSingleCharCustomDelimiter(string sInput, string[] sDelimiters, int iRealResult)
+        {
+            Program programTest = new StringCalcNewSLN.Program();
+            int iCalculatedResult = Calculator.Add(sInput, sDelimiters);
+            Assert.AreEqual(iCalculatedResult, iRealResult);
+        }
+
+        [Test]
+        [TestCase("120qqq7", new string[] { ",", "\n", "qqq" }, 127)]
+        public void LetsUsersAddMultiCharCustomDelimiter(string sInput, string[] sDelimiters, int iRealResult)
+        {
+            Program programTest = new StringCalcNewSLN.Program();
+            int iCalculatedResult = Calculator.Add(sInput, sDelimiters);
+            Assert.AreEqual(iCalculatedResult, iRealResult);
+        }
+
+        [Test]
+        [TestCase("120qqq7", new string[] { ",", "\n", "qqq", "custom"}, 127)]
+        [TestCase("120custom7", new string[] { ",", "\n", "qqq", "custom" }, 127)]
+        public void WorksWithMultipleCustomDelimitersOfAnyLength(string sInput, string[] sDelimiters, int iRealResult)
         {
             Program programTest = new StringCalcNewSLN.Program();
             int iCalculatedResult = Calculator.Add(sInput, sDelimiters);
